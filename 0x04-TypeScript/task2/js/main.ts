@@ -59,3 +59,21 @@ class Teacher:
     return "Getting to work"
 
 def createEmployee(salary: Union[int, str])
+def isDirector(employee):
+  return isinstance(employee, Director)
+def executeWork(employee):
+  if isinstance(employee, Director):
+    return employee.workDirectorTasks()
+  else:
+    return employee.workTeacherTasks()
+
+type Subjects = 'Math' | 'History';
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
+  } else if (todayClass === 'History') {
+    return 'Teaching History';
+  } else {
+    throw new Error('Invalid subject');
+  }
+}
